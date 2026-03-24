@@ -22,7 +22,7 @@ if (isNaN(sum) || sum < 0) {
   } else if (sum => 100 && sum < 500) {
     discount = 0.05
   } else if (sum => 500 && sum <= 1000) {
-    discount = 0.10
+    discount = 0.1
   } else if (sum > 1000) {
     discount = 0.15
   }
@@ -33,5 +33,5 @@ var price = sum - (sum * discount)
 price = price.toFixed(2);
 
 console.log("Сумма покупки: " + sum + " сом");
-console.log("Ваша скидка: " + (discount * 100) + " сом");
+console.log("Ваша скидка: " + (discount * sum) + " сом");
 console.log("Итого к оплате: " + price + " сом");
